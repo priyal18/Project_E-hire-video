@@ -31,7 +31,8 @@ const NewVideo = () => {
   const { id: roomID } = useParams();
 
   useEffect(() => {
-    socketRef.current = io.connect("http://localhost:5000");
+    //socketRef.current = io.connect("http://localhost:5000");
+    socketRef.current = io.connect("https://lit-stream-68135.herokuapp.com/");
     navigator.mediaDevices
       .getUserMedia({ video: true, audio: true })
       .then((stream) => {

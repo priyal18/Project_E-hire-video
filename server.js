@@ -8,6 +8,8 @@ const server = http.createServer(app);
 const socket = require("socket.io");
 const io = socket(server, { cors: { origin: "*" } });
 
+app.use(require('cors')());
+
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 const users = {};

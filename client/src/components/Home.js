@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/Home.css";
 
+
 function Home() {
   const joinSession = () => {
     window.location.href = "/join";

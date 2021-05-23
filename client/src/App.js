@@ -6,6 +6,7 @@ import Join from "./components/Join";
 import Create from "./components/Create";
 import Editor from "./components/Editor";
 import NewVideo from "./components/NewVideo";
+import CardComp from "./components/CardComp";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Router>
         <Switch>
           <Route path='/' exact>
-            <Home />
+            <CardComp />
           </Route>
           <Route path='/join' exact>
             <Join />

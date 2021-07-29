@@ -13,7 +13,6 @@ const StyledVideo = styled.video`
   width: 400px;
   height: 300px;
 	border: 2px solid gray;
-	margin: 10px;
 `;
 
 const Video = (props) => {
@@ -23,7 +22,7 @@ const Video = (props) => {
     props.peer.on("stream", (stream) => {
       ref.current.srcObject = stream;
     });
-  }, []);
+  });
 
   return <StyledVideo playsInline autoPlay ref={ref} />;
 };

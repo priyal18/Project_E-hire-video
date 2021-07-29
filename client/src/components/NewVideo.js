@@ -76,7 +76,7 @@ const NewVideo = () => {
           item.peer.signal(payload.signal);
         });
       });
-  }, []);
+  });
 
   function createPeer(userToSignal, callerID, stream) {
     const peer = new Peer({

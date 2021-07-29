@@ -1,4 +1,4 @@
-.editor {
+/* .editor {
   width: 75%;
   display: inline-block;
 }
@@ -6,4 +6,36 @@
 .newvideo {
   width: 15%;
   display: inline-block;
+} */
+
+.all-content {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.main-column1 {
+  position: relative;
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+
+.main-column2 {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  float: right;
+}
+
+.main-column .editorr {
+  max-width: 800px;
+  text-align: center;
+}
+
+.main-column .newvideo {
+  overflow: scroll;
+  max-width: 600px;
 }

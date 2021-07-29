@@ -1,0 +1,60 @@
+/* .grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "video1 video1 video1"
+    "video2 video2 video2"
+    "buttons buttons buttons";
+  grid-gap: 5px;
+  background-color: #2196f3;
+  padding: 2px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 2px 0;
+  font-size: 16px;
+}
+
+.header {
+  grid-area: header;
+}
+.video1 {
+  grid-area: video1;
+}
+.video2 {
+  grid-area: video2;
+}
+.buttons {
+  grid-area: buttons;
+} */
+.top-container {
+    background-color: #0d1117;
+    color: white;
+  }
+  .header {
+    height: 8vh;
+    text-align: center;
+  }
+  .top-video {
+    height: 42vh;
+    text-align: center;
+  }
+  .bottom-video {
+    height: 42vh;
+    text-align: center;
+  }
+  .buttons {
+    height: 8vh;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .mic-logo {
+    height: 40px;
+    width: 40px;
+  }
+  .video-logo {
+    height: 40px;
+    width: 40px;
+  }
+  

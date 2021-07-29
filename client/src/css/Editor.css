@@ -1,8 +1,120 @@
-.editor {
+/* .editor {
   width: 70%;
   margin: 5px;
 }
 .code-editor {
   display: flex;
   justify-content: center;
+} */
+
+/* .editor {
+	width: 70%;
+	margin: 5px;
+} */
+.editor-div {
+  background-color: #161b22;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.editor-header {
+  height: 8vh;
+  align-self: flex-start;
+  padding-left: 20px;
+}
+.editor-buttons {
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  align-self: flex-start;
+  margin-left: 150px;
+}
+.main-editor {
+  height: 60vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  align-self: center;
+  border-top: 5px solid #0d1117;
+  border-left: 5px solid #0d1117;
+  border-right: 5px solid #0d1117;
+  border-radius: 5px 5px 0px 0px;
+  box-shadow: 0px 0px 25px rgb(87, 86, 86);
+}
+.input-output-div {
+  height: 20vh;
+  /* position: absolute; */
+}
+.input-div {
+  display: inline-block;
+  background-color: #0d1117;
+  border-left: 5px solid #0d1117;
+  border-bottom: 2px solid #0d1117;
+  border-radius: 0px 0px 0px 5px;
+  box-shadow: -2px 0px 25px rgb(87, 86, 86);
+}
+.input {
+  margin: 2px;
+  height: 15vh;
+  width: 396px;
+  background-color: gray;
+  color: white;
+}
+.output-div {
+  display: inline-block;
+  background-color: #0d1117;
+  border-right: 5px solid #0d1117;
+  border-bottom: 2px solid #0d1117;
+  border-radius: 0px 0px 5px 0px;
+  box-shadow: 0px 2px 25px rgb(87, 86, 86);
+}
+.output {
+  margin: 2px;
+  height: 15vh;
+  width: 396px;
+  color: white;
+  background-color: gray;
+}
+.submit-button {
+  height: 7vh;
+  align-self: flex-end;
+}
+.language-div {
+  display: inline-block;
+}
+.theme-div {
+  display: inline-block;
+}
+.size-div {
+  display: inline-block;
+}
+
+select {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  font-size: 16px;
+  margin-right: 10px;
+  width: 100px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+
+button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }

@@ -13,6 +13,7 @@ const StyledVideo = styled.video`
   width: 400px;
   height: 300px;
 	border: 2px solid gray;
+	margin: 10px;
 `;
 
 const Video = (props) => {
@@ -22,7 +23,7 @@ const Video = (props) => {
     props.peer.on("stream", (stream) => {
       ref.current.srcObject = stream;
     });
-  },[]);
+  }, [props.peer]);
 
   return <StyledVideo playsInline autoPlay ref={ref} />;
 };
@@ -39,7 +40,7 @@ const NewVideo = () => {
   const [videologo, setVideologo] = useState(true);
 
   useEffect(() => {
-    // socketRef.current = io.connect("http://localhost:5000");
+    //socketRef.current = io.connect("http://localhost:5000");
     socketRef.current = io.connect("https://lit-stream-68135.herokuapp.com/");
     navigator.mediaDevices
       .getUserMedia({ video: true, audio: true })
@@ -75,7 +76,7 @@ const NewVideo = () => {
           item.peer.signal(payload.signal);
         });
       });
-  });
+  }, []);
 
   function createPeer(userToSignal, callerID, stream) {
     const peer = new Peer({
@@ -148,7 +149,7 @@ const NewVideo = () => {
           style={{ display: "inline-block", cursor: "pointer" }}
           onClick={audioPlayPause}
         >
-          {miclogo ? <MicIcon /> : <MicOffIcon />}
+					{miclogo? <MicIcon />: <MicOffIcon />}
         </div>
         <div
           style={{
@@ -158,7 +159,7 @@ const NewVideo = () => {
           }}
           onClick={videoPlayPause}
         >
-          {videologo ? <VideocamIcon /> : <VideocamOffIcon />}
+					{videologo? <VideocamIcon /> : <VideocamOffIcon />}
         </div>
       </div>
     </div>

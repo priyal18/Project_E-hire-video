@@ -55,7 +55,7 @@ int main() {
       setOutput(output);
     });
     return () => socketRef.current.disconnect();
-  }, [code, output]);
+  }, [code, output, roomId]);
 
   const codeChanged = (code) => {
     socketRef.current.emit("codeChanged", [code, roomId]);

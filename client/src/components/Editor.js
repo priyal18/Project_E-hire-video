@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import io from "socket.io-client";
@@ -12,6 +11,7 @@ import "ace-builds/src-noconflict/theme-monokai";
 import "ace-builds/src-noconflict/theme-github";
 import "ace-builds/src-noconflict/theme-solarized_dark";
 import "ace-builds/src-noconflict/theme-solarized_light";
+import "ace-builds/src-noconflict/ext-language_tools";
 import "../css/Editor.css";
 
 function Editor() {
@@ -35,7 +35,7 @@ int main() {
   const socketRef = useRef();
 
   useEffect(() => {
-    // socketRef.current = io.connect("http://localhost:5000");
+   // socketRef.current = io.connect("http://localhost:5000");
     socketRef.current = io.connect("https://lit-stream-68135.herokuapp.com/");
 
     socketRef.current.emit("join-room", roomId);
@@ -67,7 +67,7 @@ int main() {
     socketRef.current.emit("inputChanged", [val, roomId]);
     setInput(val);
   };
-  const outputChanged = () => { };
+  const outputChanged = () => {};
 
   const submitCode = (event) => {
     event.preventDefault();
@@ -229,6 +229,7 @@ int main() {
 }
 
 export default Editor;
+
 
 
 
